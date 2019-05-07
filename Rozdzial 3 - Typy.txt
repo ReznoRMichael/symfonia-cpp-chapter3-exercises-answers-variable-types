@@ -1,0 +1,136 @@
+I. Deklaracja nazwy nnn oznacza, że ta nazwa oznacza obiekt jakiegoś określonego typu.
+
+II. Definicja jest przy okazji zawsze deklaracją. Deklaracja informuje, że dana nazwa oznacza obiekt jakiegoś typu, ale nie rezerwuje dla niego miejsca w pamięci. Definicja rezerwuje miejsce w pamięci na obiekt, czyli powołuje go do życia. Klarować = wyjaśniać. Finis = koniec, granica.
+
+III. Deklarować obiekt można w danym zakresie ważności wielokrotnie.
+
+IV. Definiować obiekt można w danym zakresie ważności tylko raz.
+
+V. Obiekt o nazwie nnn powołuje do życia definicja.
+
+VI. Typy złożone to takie, których składnikiem jest jakiś typ fundamentalny.
+
+VII. Typy przeznaczone do pracy z liczbami całkowitymi: short int, int, long int - każdy z nich może być signed lub unsigned (domyślnie signed)
+
+VIII. Jeśli nie wpiszemy signed lub unsigned przy int, to domyślnie będzie to typ signed.
+
+IX. Znaki alfanumeryczne - to na przykład litery.
+
+X. Typ mogący przechowywać znaki alfanumeryczne - char.
+
+XI. Jeśli nie wpiszemy signed lub unsigned przy char, to domyślny typ będzie zależał od naszego kompilatora.
+
+XII. Typ mogący przechowywać rozszerzony zestaw znaków alfanumerycznych - wchar_t.
+
+XIII. wchar_t jest zupełnie odrębnym, pełnoprawnym typem w C++.
+
+XIV. Trzy typy przeznaczone do przechowywania liczb zmiennoprzecinkowych - float, double, long double. Nie stosujemy w nich signed/unsigned.
+
+XV. Typ przeznaczony do pracy ze zmiennymi logicznymi - bool. Może przyjmować dwie wartości - 1 lub 0 (true lub false).
+
+XVI. bool przyjmuje dwie możliwe wartości - 1 lub 0.
+
+XVII. Do typu bool nie można zastosować specyfikatora signed.
+
+XVIII. short int - 2 bajty (16 bitów) - ok. -32768 do 32767
+
+XIX. gdy jakaś liczba nie mieści się w obiekcie short int, można posłużyć się obiektem typu int lub long int.
+
+XX. Obiekty w C++ można definiować nawet wśród instrukcji wykonywalnych.
+
+XXI. W instrukcji bezpośrednio po zakończeniu pętli for można zdefiniować nowy obiekt o nazwie "i".
+
+XXII. Obiekt zdefiniowany w wyrażeniu warunkowym instrukcji if ma ważność bloku if oraz odpowiadającemu mu bloku else.
+
+XXIII. Stała dosłowna to napisana dosłownie liczba, znak lub napis lub słowa true/false. Obiekt stały mieszczący w sobie wartość 3.14 to jest stała dosłowna. 
+
+XXIV.
+dziesiętny - 17
+ósemkowy - 021 (2 * 8 + 1)
+szesnastkowy - 0x11 (1 * 16 + 1)
+
+XXV. wartość 10:
+int = 10;
+long = 10L;
+unsigned int = 10u;
+unsigned long = 10uL;
+double = 10.0 lub 1e1;
+float = 10.0F;
+
+XXVI. liczba 15.6:
+stała dosłowna double = 15.6 lub 1.56e1;
+stała dosłowna float = 15.6F lub 1.56e1F;
+
+XXVII. Tylko dwie stałe dosłowne typu bool: true oraz false.
+
+XXVIII. Stała znakowa 'w' jest typu char.
+
+XXIX. Stałe dosłowne reprezentujące:
+'\t' tabulator poziomy
+'\v' tabulator pionowy
+'\n' nowa linia
+'\\' odwrotny ukosnik
+'\a' sygnal dzwiekowy
+
+XXX. Stała dosłowna znak o kodzie (szesnastkowy) 2f (16) = '\x2f'
+
+XXXI. Stała dosłowna znak o kodzie (ósemkowy) 10 (8) = '\10'
+
+XXXII. Stała dosłowna m jako typ wchar_t = L'm'
+
+XXXIII. Stała dosłowna C-string = "Michael\nReznoR"
+
+XXXIV. "Pisanie stałej dosłownej"
+" można dokończyć w drugiej linii."
+
+XXXV. Omyłkowo powtórzone pytanie
+
+XXXVI. void to typ fundamentalny.
+
+XXXVII. Nie może istnieć obiekt typu void (nie można go zdefiniować, gdyż typ jest nieznany).
+
+XXXVIII. Czas życia obiektu to okres pomiędzy jego definicją (zarezerwowaniem miejsca w pamięci) do momentu gdy przestaje istnieć (zwolnienie miejsca w pamięci).
+
+XXXIX. Zakres ważności nazwy obiektu to część programu, w której nazwa obiektu jest znana, a obiekt jest dostępny.
+
+XL. Różnica pomiędzy dwoma powyższymi pojęciami: W jakimś momencie obiekt wciąż może istnieć, ale nie być dostępny, gdyż np. znajdujemy się poza zakresem ważności jego nazwy.
+
+XLI. Zdefiniowane w bloku {} nazwy mają zakres ważności tylko do tego bloku. Spoza bloku nie można się odnieść do tej nazwy.
+
+XLII. Etykieta ma zakres ważności funkcji. Nie można przeskoczyć z wnętrza funkcji do wnętrza innej funkcji przy pomocy instrukcji goto.
+
+XLIII. Nazwa globalna oznacza, że dana nazwa jest znana w całym pliku, od miejsca jej deklaracji, jeśli została zdeklarowana na zewnątrz jakiegokolwiek bloku oraz poza przestrzenią nazw. Nie jest znana w innych plikach.
+
+XLIV. Aby odnosić się do nazwy cout bez kwalifikatora zakresu :: należy użyć dyrektywy using (using namespace std lub using std::cout)
+
+XLV. Zasłonięcie nazwy globalnej przez nazwę lokalną następuje poprzez zadeklarowanie identycznej nazwy lokalnej co nazwa globalna. W danym lokalnym zakresie zasłania ona wtedy zmienną globalną.
+
+XLVI. Aby odnieść się do zasłoniętej nazwy globalnej w lokalnym bloku, należy użyć operatora zakresu :: np. ::zmienna 
+
+XLVII. Nie można odnieść się do zasłoniętej nazwy lokalnej w głębiej zagnieżdżonym bloku lokalnym. Jest to tylko możliwe do zasłoniętego obiektu globalnego.
+
+XLVIII. Inicjalizacja to nadanie obiektowi wartości w momencie powołania go do życia. Przypisanie to podstawienie wartości do obiektu w dowolnym momencie jego istnienia.
+
+IL. Obiektowi z przydomkiem const nie można przypisać innej wartości po jego utworzeniu. Dlatego przypisanie mu wartości musi nastąpić w momencie jego inicjalizacji.
+
+L. Przydomek register mówi kompilatorowi, że obiekt z takim przydomkiem warto umieścić w rejestrze, czyli bardzo szybkiej pamięci z niemal natychmiastowym dostępem. (nie ma na to gwarancji, zależy od kompilatora)
+
+LI. Przydomek volatile ostrzega kompilator, że obiekt tak określony może się ciągle zmieniać, czyli nie może stosować sztuczek optymalizacyjnych, aby się do niego odnosić, ale za każdym razem faktycznie odczytywać jego wartość z pamięci.
+
+LII. Instrukcja typedef pozwala na nadanie dodatkowej nazwy już istniejącemu typowi. Np. typedef int cena oznacza że można deklarować typ int przy pomocy nazwy cena. (cena a, b, c;). Nie tworzy nowego typu, ale jedynie synonim nazwy już istniejącej.
+
+LIII. Instrukcja enum tworzy nowy typ danych, oparty o typ int.
+
+LIV. Jeśli na liście wyliczeniowej enum nie przypiszemy żadnej wartości pierwszej nazwie, to otrzyma ona wartość 0 przez domniemanie.
+
+LV. Jeśli na liście wyliczeniowej enum nie przypiszemy żadnej wartości jednej z kolejnych nazw, to otrzyma ona wartość o 1 większą od poprzedniej wartości na liście.
+
+LVI. Typ wytworzony przez enum jest typem całkowitym.
+
+LVII. Na liście wyliczeniowej nie możemy umieścić stałej dosłownej 3.14.
+
+LVIII. Nie można podawać nazw z różnych typów wyliczeniowych tam, gdzie program się ich nie spodziewa, nawet jeśli mają te same wartości.
+
+
+
+
